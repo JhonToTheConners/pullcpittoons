@@ -1,4 +1,4 @@
-bash resetvars.sh
+python delitems.py
 bash "pull data.sh"
 python "convert to list.py"
 bash swgohpages.sh
