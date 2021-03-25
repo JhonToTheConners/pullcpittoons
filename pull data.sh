@@ -1,0 +1,1 @@
+curl https://swgoh.gg/g/28585/golden-leaders/ >> guildpage.txt
