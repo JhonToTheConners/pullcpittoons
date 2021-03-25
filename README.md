@@ -7,5 +7,6 @@ Script that will pull your swgoh.gg guild's profile, then pull each guildmate's 
 INSTRUCTIONS:
 
 (1): Open pulldata.sh, change my guild's swgoh.gg page to your guild's page. 
+
 (2): Run RUNALL.sh
 
