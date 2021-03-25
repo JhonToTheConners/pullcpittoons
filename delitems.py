@@ -8,11 +8,11 @@ try:
 except:
 	print("test2")
 try:
-	arr = os.listdir("C:/Users/JB/Desktop/cpit script/pages/")
+	arr = os.listdir(os.getcwd() + "/pages/")
 	print(arr)
 	for file in arr:
 		print(file)
-		os.remove("C:/Users/JB/Desktop/cpit script/pages/" + file)
+		os.remove(os.getcwd() + "/pages/" + file)
 except:
 	print("test3")
 try:

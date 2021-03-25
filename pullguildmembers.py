@@ -10,7 +10,7 @@ newdict = {}
 def findallr5(inputfile):
     templist = []
     ndlist = []
-    stroffile = "C:/Users/JB/Desktop/cpit script/pages/" + file
+    stroffile = (os.getcwd() + "/pages/" + file)
     x_file = open(stroffile, "r")
     for line in x_file:
         stripped_line = line.strip()
@@ -36,7 +36,7 @@ def findallr5(inputfile):
 
 
 
-arr = os.listdir("C:/Users/JB/Desktop/cpit script/pages/")
+arr = os.listdir(os.getcwd() + "/pages/")
 for file in arr:
     findallr5(file)
 y_file = open("guildroster.txt", "a")
