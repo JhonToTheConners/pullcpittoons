@@ -16,8 +16,12 @@ def findallr5(inputfile):
         stripped_line = line.strip()
         templist.append(stripped_line)
     for item in range(len(templist)):
+        countervar = 0
         if templist[item - 1] == r'<div class="char-portrait-full-relic">5</div>' or templist[item - 1] == r'<div class="char-portrait-full-relic">6</div>' or templist[item - 1] == r'<div class="char-portrait-full-relic">7</div>':
-            newvar = (templist[item - 11]).split()
+            for i in range(11):
+                if templist[item-i] == "":
+                    countervar = countervar + 1
+            newvar = (templist[item - (11+countervar)]).split()
             for newitem in newvar:
                 if newitem.startswith("alt"):
                     for i in range(5):
