@@ -19,4 +19,8 @@ try:
 	os.remove("guildroster.txt")
 except:
 	print("test3")
+try:
+	os.remove("guildteams.txt")
+except:
+	print("test4")
 quit()
