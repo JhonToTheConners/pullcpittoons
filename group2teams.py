@@ -1,5 +1,9 @@
 #!"C:\Program Files (x86)\py\python.exe"
 # -*- coding: utf-8 -*-
+global padmecounter
+global shaakcounter
+padmecounter = 0
+shaakcounter = 0
 def are_you_at_txt(matrix, line: int) -> bool:
 	if ".txt" in matrix[line]:
 		return True
@@ -57,8 +61,12 @@ def teamgenerator(matrix, line: int) -> None:
 		currentstr = del_item_from_str(currentstr, "ARC Trooper")
 	if padme and GK and JKA and AT:
 		padmestring = "PADME"
+		global padmecounter
+		padmecounter = padmecounter + 1
 	if Shaak and ECHO and FIVES and Rex and ARC:
 		shaaktroopersstring = "SHAAKTROOPERS"
+		global shaakcounter
+		shaakcounter = shaakcounter + 1
 	new_file.write(player + "    " + padmestring + "  " + shaaktroopersstring + "     " + currentstr + "\n \n \n")
 	
 	
@@ -77,4 +85,6 @@ for index in range(len(matrix)):
 		teamgenerator(matrix, index)
 	else:
 		pass
+new_file.write(str("Padme:" + str(padmecounter) + " * 3 each = " + str(padmecounter*3) + "%" + "P1\n"))
+new_file.write("Shaak:" + str(shaakcounter) + " * 3 each = " + str(shaakcounter*3) + "%" + "P2")
 new_file.close
